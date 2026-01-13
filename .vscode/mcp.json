@@ -1,8 +1,8 @@
 {
-  "servers": {
-    "stack-auth": {
-      "type": "http",
-      "url": "https://mcp.stack-auth.com/"
-    }
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
