@@ -158,9 +158,7 @@ export default async function DashboardPage() {
                         <div className={"flex item-center justify-between mb-6"}>
                             <h2 className={"text-gray-900 font-semibold text-lg"}>New Products per week</h2>
                         </div>
-                        <div className={"h-48"}>
-                            <ProductChart data={weeklyProductsData}/>
-                        </div>
+                        <ProductChart data={weeklyProductsData}/>
                     </div>
                 </div>
 
