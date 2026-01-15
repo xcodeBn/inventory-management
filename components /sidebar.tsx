@@ -1,23 +1,24 @@
-import {AppleIcon, BarChart, BarChart3, Package, Plus, Settings} from "lucide-react";
+'use client';
+
+import { BarChart3, Package, Plus, Settings } from "lucide-react";
 import Link from "next/link";
-import {UserButton} from "@neondatabase/auth/react";
+import { usePathname } from "next/navigation";
+import { UserButton } from "@neondatabase/auth/react";
 
-
-export default function SideBar({currentPath = "/dashboard"}:{
-    currentPath: string;
-}) {
+export default function SideBar() {
+    const currentPath = usePathname();
     const navigation = [
         {
-            name: "Dashboard",href: "/dashboard", icon: BarChart3,
+            name: "Dashboard", href: "/dashboard", icon: BarChart3,
         },
         {
-            name: "Inventory",href: "/inventory", icon: Package,
+            name: "Inventory", href: "/inventory", icon: Package,
         },
         {
-            name: "Add Product",href: "/add-product", icon: Plus,
+            name: "Add Product", href: "/add-product", icon: Plus,
         },
         {
-            name: "Settings",href: "/settings", icon: Settings,
+            name: "Settings", href: "/settings", icon: Settings,
         },
     ]
 
@@ -25,9 +26,9 @@ export default function SideBar({currentPath = "/dashboard"}:{
         <div className="fixed left-0 top-0 bg-gray-900 text-white w-64 min-h-screen p-6">
             <div className={"mb-8"}>
                 <div className={"flex items-center space-x-2 mb-4"}>
-                    <BarChart3 className={"w-7 h-7"}/>
+                    <BarChart3 className={"w-7 h-7"} />
                     <span className={"text-lg font-semibold"}>
-                    Inventory App
+                        Inventory App
                     </span>
                 </div>
 
@@ -36,17 +37,16 @@ export default function SideBar({currentPath = "/dashboard"}:{
                         Inventory
                     </div>
                     {
-
-                        navigation.map((item,key)=>{
+                        navigation.map((item, key) => {
                             const IconComponent = item.icon;
-                            const isActive : boolean  = currentPath === item.href;
-                            return(
+                            const isActive: boolean = currentPath === item.href;
+                            return (
                                 <Link href={item.href} key={key}
-                                      className={`flex items-center space-x-3 py-2 px-3 rounded-lg 
-                                      ${isActive?"bg-purple-100 text-gray-800": "text-gray-300 hover:bg-gray-800"} `} >
-                                    <IconComponent className={"w-5 h-5"}/>
+                                    className={`flex items-center space-x-3 py-2 px-3 rounded-lg 
+                                      ${isActive ? "bg-purple-100 text-gray-800" : "text-gray-300 hover:bg-gray-800"} `} >
+                                    <IconComponent className={"w-5 h-5"} />
                                     <span className={"text-sm"}>
-                                    {item.name}
+                                        {item.name}
                                     </span>
                                 </Link>
                             )
@@ -55,11 +55,9 @@ export default function SideBar({currentPath = "/dashboard"}:{
                 </nav>
                 <div className={"absolute bottom-0 left-0 right-0 p-6 border-t border-gray-700 overflow-hidden"}>
                     <div className={"flex items-center  mb-4 justify-between"}>
-                        <UserButton   className="max-w-full overflow-hidden"/>
+                        <UserButton className="max-w-full overflow-hidden" />
                     </div>
                 </div>
-
-
             </div>
         </div>
     )

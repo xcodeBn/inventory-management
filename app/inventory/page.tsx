@@ -46,7 +46,7 @@ export default async function InventoryPage({searchParams}: {searchParams: Promi
 
     return(
         <div className={"min-h-screen bg-gray-50"}>
-            <SideBar currentPath={"/inventory"} />
+            <SideBar />
             <main className={"ml-64 p-4"}>
                 <div className={"mb-8"}>
                     <div className={"flex items-center justify-between"}>

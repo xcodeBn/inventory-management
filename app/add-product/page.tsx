@@ -9,7 +9,7 @@ import {createProduct} from "@/lib/actions/products";
 export default async function AddProductPage(){
     const user = await getCurrentUser();
     return <div className={"min-h-screen bg-gray-50 "}>
-        <SideBar currentPath={"/add-product"}/>
+        <SideBar />
         <main className={"ml-64 p-8"}>
             <div className={"mb-8"}>
                 <div className={"flex items-center justify-between"}>
