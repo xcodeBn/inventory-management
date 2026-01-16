@@ -7,8 +7,6 @@ interface ChartData {
 }
 
 export default function ProductChart({ data }: {data: ChartData[]}) {
-    console.log(data);
-
     return(
         <div className="h-48 w-full">
             <ResponsiveContainer width="100%" height="100%">
@@ -31,9 +29,9 @@ export default function ProductChart({ data }: {data: ChartData[]}) {
                     <Tooltip
                     contentStyle={{
                            backgroundColor: 'white',
-                        borderStyle: '1px solid #7e5e7eb',
+                        border: '1px solid #7e5e7e',
                         borderRadius: "8px",
-                        boxShadow: '0 4px 6px -1px #rgba(0,0,0,0.1)',
+                        boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)',
                         }}
                     labelStyle={{color: '374151', fontWeight: "500"}}/>
                     <Area

@@ -1,10 +1,7 @@
-import {getCurrentUser} from "@/lib/auth";
-import SideBar from "@/components /sidebar";
+import SideBar from "@/components/sidebar";
 import {AccountSettingsCards} from "@neondatabase/auth/react";
 
-export default async function SettingsPage(){
-    const user = await getCurrentUser();
-
+export default function SettingsPage(){
    return <div className={"min-h-screen bg-gray-50 "}>
         <SideBar />
         <main className={"ml-64 p-8"}>

@@ -14,7 +14,7 @@ async function main() {
         }))
     })
 
-    console.log("Db seeded succesfully")
+    console.log("Db seeded successfully")
 }
 
 
