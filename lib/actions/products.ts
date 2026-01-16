@@ -89,10 +89,9 @@ export async function createProduct(formData: FormData): Promise<void> {
                 ...parsed.data
             }
         })
-
-        redirect("/inventory");
-    }
-    catch (error) {
-        throw new Error(`Failed to create product ${error}`)
+        redirect("/products");
+    } catch (error) {
+        console.error(error);
+        throw error;
     }
 }
