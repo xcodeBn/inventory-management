@@ -21,7 +21,7 @@ export default async function Home() {
                         <Link href="/auth/sign-in" className={"bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"}>
                             Sign In
                         </Link>
-                        <Link href="#" className={"bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold border-2  border-bg-purple-600 hover:bg-purple-100"}>
+                        <Link href="#" className={"bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold border-2 border-purple-600 hover:bg-purple-100"}>
                             Learn More
                         </Link>
                     </div>
