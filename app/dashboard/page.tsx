@@ -2,9 +2,8 @@
 import {prisma} from "@/lib/prisma";
 import {getCurrentUser} from "@/lib/auth";
 import {TrendingUp} from 'lucide-react'
-import SideBar from "@/components /sidebar";
-import ProductChart from "@/components /productchart";
-import {Data} from "effect/Schema";
+import SideBar from "@/components/sidebar";
+import ProductChart from "@/components/productchart";
 
 export default async function DashboardPage() {
     const {user} = await getCurrentUser();
@@ -46,10 +45,6 @@ export default async function DashboardPage() {
 
     const totalValue = allProducts.reduce((sum, product) =>
         sum + Number(product.price) * Number(product.quantity), 0);
-
-    console.log(totalProducts);
-    console.log(recentProducts);
-    console.log(totalValue);
 
     const weeklyProductsData = []
 
@@ -154,7 +149,7 @@ export default async function DashboardPage() {
                     </div>
 
                     {/*Inventory Over Time*/}
-                    <div className={"bg-white rounded-lg border -gray-200 p-6"}>
+                    <div className={"bg-white rounded-lg border border-gray-200 p-6"}>
                         <div className={"flex item-center justify-between mb-6"}>
                             <h2 className={"text-gray-900 font-semibold text-lg"}>New Products per week</h2>
                         </div>
@@ -204,7 +199,7 @@ export default async function DashboardPage() {
                     {/* Efficiency */}
                     <div className={"bg-white rounded-lg border border-gray-200 p-6"}>
                         <div className={"flex items-center justify-between mb-6"}>
-                            <h1 className={"text-gray-900 text-lg font-semibold"}>Efficeincy</h1>
+                            <h1 className={"text-gray-900 text-lg font-semibold"}>Efficiency</h1>
                         </div>
                         <div className="flex items-center justify-center">
                             <div className="relative w-48 h-48">

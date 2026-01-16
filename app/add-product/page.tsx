@@ -1,13 +1,11 @@
 'use server'
 
 
-import {getCurrentUser} from "@/lib/auth";
-import SideBar from "@/components /sidebar";
+import SideBar from "@/components/sidebar";
 import Link from "next/link";
 import {createProduct} from "@/lib/actions/products";
 
 export default async function AddProductPage(){
-    const user = await getCurrentUser();
     return <div className={"min-h-screen bg-gray-50 "}>
         <SideBar />
         <main className={"ml-64 p-8"}>

@@ -3,12 +3,11 @@
 
 
 
-import SideBar from "@/components /sidebar";
+import SideBar from "@/components/sidebar";
 import {prisma} from "@/lib/prisma";
 import {getCurrentUser} from "@/lib/auth";
 import {deleteProduct} from "@/lib/actions/products";
-import {SearchParams} from "next/dist/server/request/search-params";
-import Pagination from "@/components /pagination";
+import Pagination from "@/components/pagination";
 
 export default async function InventoryPage({searchParams}: {searchParams: Promise<{ q?:string, page?:string }>}){
     const {user} = await getCurrentUser();

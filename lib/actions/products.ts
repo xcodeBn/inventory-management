@@ -89,7 +89,7 @@ export async function createProduct(formData: FormData): Promise<void> {
                 ...parsed.data
             }
         })
-        redirect("/products");
+        redirect("/inventory");
     } catch (error) {
         console.error(error);
         throw error;
